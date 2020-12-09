@@ -6,12 +6,35 @@ package com.myspace.test_git;
 
 public class TestModel implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public TestModel() {
-    }
+	@org.kie.api.definition.type.Label(value = "id")
+	private java.math.BigInteger id;
+	@org.kie.api.definition.type.Label(value = "name")
+	private java.lang.String name;
 
+	public TestModel() {
+	}
 
+	public java.math.BigInteger getId() {
+		return this.id;
+	}
 
+	public void setId(java.math.BigInteger id) {
+		this.id = id;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public TestModel(java.math.BigInteger id, java.lang.String name) {
+		this.id = id;
+		this.name = name;
+	}
 
 }
